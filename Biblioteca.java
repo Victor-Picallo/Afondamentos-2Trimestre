@@ -99,4 +99,18 @@ public class Biblioteca {
 
         return sumaDiferenciasCuadradas / lista.length;
     }
+
+    //Obetener desviacion estandar
+    public static double obtenerDesviacionEstandar(int[] lista) {
+        double varianza = obtenerVarianza(lista);
+        return Math.sqrt(varianza);
+    }
+
+    //Varianza entre medi de variabilidad relativa para comparar distrubuciones
+    public static double obtenerCoeficienteVariacion(int[] lista) {
+        double media = obtenerMedia(lista);
+        double desviacionEstandar = obtenerDesviacionEstandar(lista);
+        if (media == 0) return 0; // Evita division por 0
+        return desviacionEstandar / media;
+    }
 }

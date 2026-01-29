@@ -77,14 +77,12 @@ public class Biblioteca {
 
     // Rango de datos 
     public static int obtenerRango(int[] lista) {
-        int min = Integer.MIN_VALUE;
-        int max = Integer.MAX_VALUE;
-
+        int min = lista[0];
+        int max = lista[0];
         for (int x : lista) {
             if (x < min) min = x;
             if (x > max) max = x;
         }
-
         return max - min;
     }
 
